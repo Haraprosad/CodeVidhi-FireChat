@@ -10,28 +10,30 @@ class AppThemeColorsConfig {
   // Theme color schemes
   static final Map<AppThemeType, ThemeColors> themeColors = {
     AppThemeType.light: ThemeColors(
-      primary: const Color(0xFF0066CC),
-      secondary: const Color(0xFFD93025),
-      success: const Color(0xFF2E7D32),
-      background: const Color(0xFFFFFFFF),
-      surface: const Color(0xFFF5F5F5),
-      textPrimary: const Color(0xFF212121),
-      textSecondary: const Color(0xFF757575),
+      primary: const Color(0xFF0084FF), // Messenger blue
+      secondary: const Color(0xFFFF4081),
+      success: const Color(0xFF00C853),
+      background: const Color(0xFFFAFAFA), // Subtle light gray
+      surface: const Color(0xFFFFFFFF), // Pure white
+      textPrimary: const Color(0xFF050505),
+      textSecondary: const Color(0xFF65676B),
       warning: _warning,
       alert: _alert,
+      chatOutgoingBubble: const Color(0xFF0084FF), // Messenger blue
+      chatIncomingBubble: const Color(0xFFF0F2F5), // Lighter gray for bubbles
     ),
     AppThemeType.dark: ThemeColors(
-      primary: const Color(0xFF338DFF),
-      secondary: const Color(0xFFFF4545),
-      success: const Color(0xFF4CAF50),
-      background: const Color(0xFF121212),
-      surface: const Color(0xFF1E1E1E),
-      textPrimary: const Color(0xFFE1E1E1),
-      textSecondary: const Color(0xFFB0B0B0),
+      primary: const Color(0xFF0084FF), // Messenger blue
+      secondary: const Color(0xFFFF4081),
+      success: const Color(0xFF00C853),
+      background: const Color(0xFF1A1B1E), // Softer dark background
+      surface: const Color(0xFF2D2F34), // Elevated dark surface
+      textPrimary: const Color(0xFFE4E6EB),
+      textSecondary: const Color(0xFFB0B3B8),
       warning: _warning,
       alert: _alert,
-      // chatOutgoingBubble: const Color(0xFF1E3A5F), // Dark blue
-      // chatAiBubble: const Color(0xFF2C1B3A), // Dark purple
+      chatOutgoingBubble: const Color(0xFF0084FF), // Messenger blue
+      chatIncomingBubble: const Color(0xFF3E4042), // Softer dark gray
     ),
   };
 }

@@ -1,36 +1,36 @@
-import 'package:flutter/material.dart';
-import 'package:codevidhi_firechat/core/router/route_names.dart';
-import 'package:codevidhi_firechat/features/dlt_tasks/domain/entities/task_entity.dart';
-import 'package:go_router/go_router.dart';
+// import 'package:flutter/material.dart';
+// import 'package:codevidhi_firechat/core/router/route_names.dart';
+// import 'package:codevidhi_firechat/features/dlt_tasks/domain/entities/task_entity.dart';
+// import 'package:go_router/go_router.dart';
 
-class TaskItem extends StatelessWidget {
-  final TaskEntity task;
+// class TaskItem extends StatelessWidget {
+//   final TaskEntity task;
 
-  const TaskItem({super.key, required this.task});
+//   const TaskItem({super.key, required this.task});
 
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        title: Text(
-          task.title,
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
-        subtitle: Text(
-          task.description,
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-        trailing: Icon(
-          task.isCompleted ? Icons.check_circle : Icons.circle_outlined,
-          color: task.isCompleted ? Theme.of(context).primaryColor : null,
-        ),
-        onTap: () {
-          context.pushNamed(
-            RouteNames.taskDetails,
-            pathParameters: {'taskId': task.id},
-          );
-        },
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Card(
+//       child: ListTile(
+//         title: Text(
+//           task.title,
+//           style: Theme.of(context).textTheme.titleMedium,
+//         ),
+//         subtitle: Text(
+//           task.description,
+//           style: Theme.of(context).textTheme.bodyMedium,
+//         ),
+//         trailing: Icon(
+//           task.isCompleted ? Icons.check_circle : Icons.circle_outlined,
+//           color: task.isCompleted ? Theme.of(context).primaryColor : null,
+//         ),
+//         onTap: () {
+//           context.pushNamed(
+//             RouteNames.taskDetails,
+//             pathParameters: {'taskId': task.id},
+//           );
+//         },
+//       ),
+//     );
+//   }
+// }

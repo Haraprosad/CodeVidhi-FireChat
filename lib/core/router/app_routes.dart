@@ -1,3 +1,4 @@
+import 'package:codevidhi_firechat/features/chats/presentation/pages/chats_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:codevidhi_firechat/core/router/navigator_keys.dart';
@@ -8,18 +9,10 @@ import 'package:codevidhi_firechat/core/widgets/scaffold_with_bottom_nav.dart';
 import 'package:codevidhi_firechat/features/dlt_auth/presentation/pages/login_screen.dart';
 import 'package:codevidhi_firechat/features/dlt_auth/presentation/pages/register_screen.dart';
 import 'package:codevidhi_firechat/features/dlt_auth/presentation/pages/splash_screen.dart';
-import 'package:codevidhi_firechat/features/dlt_home/presentation/pages/home_screen.dart';
-import 'package:codevidhi_firechat/features/dlt_home/presentation/pages/notifications_screen.dart';
 import 'package:codevidhi_firechat/features/dlt_profile/presentation/pages/edit_profile_screen.dart';
 import 'package:codevidhi_firechat/features/dlt_profile/presentation/pages/profile_screen.dart';
-import 'package:codevidhi_firechat/features/dlt_tasks/presentation/bloc/task_bloc.dart';
-import 'package:codevidhi_firechat/features/dlt_tasks/presentation/pages/sub_tasks_screen.dart';
-import 'package:codevidhi_firechat/features/dlt_tasks/presentation/pages/task_details_screen.dart';
-import 'package:codevidhi_firechat/features/dlt_tasks/presentation/pages/tasks_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
-
-import '../di/injection.dart';
 
 @singleton
 class AppRoutes {
@@ -50,58 +43,22 @@ class AppRoutes {
             // Home Stack
 
             GoRoute(
-              path: RoutePaths.home,
-              name: RouteNames.home,
-              builder: (context, state) => const HomeScreen(),
-              routes: [
-                GoRoute(
-                  path: 'notifications',
-                  name: RouteNames.notifications,
-                  builder: (context, state) => const NotificationsScreen(),
-                ),
-              ],
+              path: RoutePaths.chats,
+              name: RouteNames.chats,
+              builder: (context, state) => const ChatsPage(),
+              // routes: [
+              //   GoRoute(
+              //     path: RoutePaths.conversation,
+              //     name: RouteNames.conversation,
+              //     builder: (context, state) => const NotificationsScreen(),
+              //   ),
+              // ],
             ),
-
-            ShellRoute(
-                builder: (context, state, child) {
-                  return BlocProvider(
-                    create: (_) => sl<TaskBloc>(),
-                    child: child,
-                  );
-                },
-                routes: [
-                  // Tasks Stack with Nested Navigation
-                  GoRoute(
-                    path: RoutePaths.tasks,
-                    name: RouteNames.tasks,
-                    builder: (context, state) => const TasksScreen(),
-                    routes: [
-                      GoRoute(
-                        path: RoutePaths.taskDetails,
-                        name: RouteNames.taskDetails,
-                        builder: (context, state) {
-                          final taskId = state.pathParameters['taskId']!;
-                          return TaskDetailsScreen(taskId: taskId);
-                        },
-                        routes: [
-                          GoRoute(
-                            path: RoutePaths.subTasks,
-                            name: RouteNames.subTasks,
-                            builder: (context, state) {
-                              final taskId = state.pathParameters['taskId']!;
-                              return SubTasksScreen(taskId: taskId);
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ]),
 
             // Profile Stack with Tabs
             GoRoute(
-              path: RoutePaths.profile,
-              name: RouteNames.profile,
+              path: RoutePaths.settings,
+              name: RouteNames.settings,
               builder: (context, state) => const ProfileScreen(),
               routes: [
                 GoRoute(

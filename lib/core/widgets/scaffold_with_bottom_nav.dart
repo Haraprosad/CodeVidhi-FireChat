@@ -30,16 +30,13 @@ class ScaffoldWithBottomNav extends StatelessWidget {
               onTap: (index) => _onItemTapped(index, context),
               items: const [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
-                  label: 'Home',
+                  icon: Icon(Icons.chat),
+                  label: 'Chats',
                 ),
+  
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.task),
-                  label: 'Tasks',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.person),
-                  label: 'Profile',
+                  icon: Icon(Icons.settings),
+                  label: 'Settings',
                 ),
               ],
             ),
@@ -52,8 +49,7 @@ class ScaffoldWithBottomNav extends StatelessWidget {
   int _calculateSelectedIndex(BuildContext context) {
     final location =
         GoRouter.of(context).routerDelegate.currentConfiguration.fullPath;
-    if (location.startsWith(RoutePaths.tasks)) return 1;
-    if (location.startsWith(RoutePaths.profile)) return 2;
+    if (location.startsWith(RoutePaths.settings)) return 1;
     return 0;
   }
 
@@ -62,13 +58,10 @@ class ScaffoldWithBottomNav extends StatelessWidget {
 
     switch (index) {
       case 0:
-        context.goNamed(RouteNames.home);
+        context.goNamed(RouteNames.chats);
         break;
       case 1:
-        context.goNamed(RouteNames.tasks);
-        break;
-      case 2:
-        context.goNamed(RouteNames.profile);
+        context.goNamed(RouteNames.settings);
         break;
     }
   }

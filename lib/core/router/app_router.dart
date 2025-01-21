@@ -56,7 +56,7 @@ class AppRouter {
 
     // Redirect logged in users from auth screens
     if (isLoggedIn && (isLoginRoute || isRegisterRoute || isSplash)) {
-      return RoutePaths.home;
+      return RoutePaths.chats;
     }
 
     return null;

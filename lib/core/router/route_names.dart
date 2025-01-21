@@ -7,20 +7,14 @@ class RouteNames {
   static const String register = 'register';
   
   // Main Routes
-  static const String home = 'home';
-  static const String tasks = 'tasks';
-  static const String profile = 'profile';
+  static const String chats = 'chats';
   static const String settings = 'settings';
   
   // Nested Routes
-  static const String taskDetails = 'taskDetails';
-  static const String subTasks = 'subTasks';
-  static const String editTask = 'editTask';
-  static const String notifications = 'notifications';
+  static const String conversation = 'conversation';
   
   // Profile Routes
   static const String editProfile = 'editProfile';
-  static const String preferences = 'preferences';
   
   const RouteNames._();
 }

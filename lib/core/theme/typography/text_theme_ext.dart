@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 extension TextThemeExtension on BuildContext {
   TextStyle? get displayLarge => Theme.of(this).textTheme.displayLarge;
@@ -16,4 +17,6 @@ extension TextThemeExtension on BuildContext {
   TextStyle? get labelLarge => Theme.of(this).textTheme.labelLarge;
   TextStyle? get labelMedium => Theme.of(this).textTheme.labelMedium;
   TextStyle? get labelSmall => Theme.of(this).textTheme.labelSmall;
+  TextStyle? get timestamp => Theme.of(this).textTheme.labelSmall?.copyWith(fontSize: 12.sp,
+        height: 1.33,);
 }

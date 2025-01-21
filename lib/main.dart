@@ -100,7 +100,7 @@ class MyChatsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.loc.flutter_template),
+        title: Text(context.loc.flutter_template, style: context.titleLarge),
       ),
       body: Center(
         child: Column(
