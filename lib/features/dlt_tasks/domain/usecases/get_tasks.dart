@@ -1,5 +1,5 @@
-import 'package:flutter_specialized_temp/features/dlt_tasks/domain/entities/task_entity.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/domain/repositories/task_repository.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/domain/entities/task_entity.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/domain/repositories/task_repository.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable

@@ -1,6 +1,6 @@
-import 'package:flutter_specialized_temp/features/dlt_tasks/data/datasources/task_local_datasources.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/domain/entities/task_entity.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/domain/repositories/task_repository.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/data/datasources/task_local_datasources.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/domain/entities/task_entity.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/domain/repositories/task_repository.dart';
 import 'package:injectable/injectable.dart';
 
 @Injectable(as: TaskRepository)

@@ -1,4 +1,4 @@
-import 'package:flutter_specialized_temp/core/network/error_handling/models/api_call_failure_model.dart';
+import 'package:codevidhi_firechat/core/network/error_handling/models/api_call_failure_model.dart';
 
 /// Represents the result of an API call, either success or failure.
 sealed class ApiResult<T> {

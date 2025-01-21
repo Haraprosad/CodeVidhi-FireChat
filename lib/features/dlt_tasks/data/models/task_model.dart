@@ -1,4 +1,4 @@
-import 'package:flutter_specialized_temp/features/dlt_tasks/domain/entities/task_entity.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/domain/entities/task_entity.dart';
 
 class TaskModel extends TaskEntity {
   TaskModel({

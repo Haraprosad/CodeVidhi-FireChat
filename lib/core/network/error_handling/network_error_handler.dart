@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_specialized_temp/core/network/constants/response_code.dart';
-import 'package:flutter_specialized_temp/core/network/enums/custom_error_type.dart';
-import 'package:flutter_specialized_temp/core/network/constants/error_messages_key.dart';
-import 'package:flutter_specialized_temp/core/network/error_handling/models/custom_exception.dart';
-import 'package:flutter_specialized_temp/core/network/services/localization_service/localization_service.dart';
-import 'package:flutter_specialized_temp/core/network/error_handling/models/api_call_failure_model.dart';
+import 'package:codevidhi_firechat/core/network/constants/response_code.dart';
+import 'package:codevidhi_firechat/core/network/enums/custom_error_type.dart';
+import 'package:codevidhi_firechat/core/network/constants/error_messages_key.dart';
+import 'package:codevidhi_firechat/core/network/error_handling/models/custom_exception.dart';
+import 'package:codevidhi_firechat/core/network/services/localization_service/localization_service.dart';
+import 'package:codevidhi_firechat/core/network/error_handling/models/api_call_failure_model.dart';
 import 'package:injectable/injectable.dart';
 
 /// Class that handles network errors and provides localized error messages.

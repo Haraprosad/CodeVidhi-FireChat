@@ -1,6 +1,6 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:flutter_specialized_temp/core/exceptions/storage_exception.dart';
-import 'package:flutter_specialized_temp/core/storage/storage_keys.dart';
+import 'package:codevidhi_firechat/core/exceptions/storage_exception.dart';
+import 'package:codevidhi_firechat/core/storage/storage_keys.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton
@@ -13,7 +13,8 @@ class SecureStorageManager {
     try {
       await _storage.write(key: key, value: value);
     } catch (e) {
-      throw SecureStorageException('Failed to write secure data for key "$key": $e');
+      throw SecureStorageException(
+          'Failed to write secure data for key "$key": $e');
     }
   }
 
@@ -21,7 +22,8 @@ class SecureStorageManager {
     try {
       return await _storage.read(key: key);
     } catch (e) {
-      throw SecureStorageException('Failed to read secure data for key "$key": $e');
+      throw SecureStorageException(
+          'Failed to read secure data for key "$key": $e');
     }
   }
 
@@ -29,7 +31,8 @@ class SecureStorageManager {
     try {
       await _storage.delete(key: key);
     } catch (e) {
-      throw SecureStorageException('Failed to delete secure data for key "$key": $e');
+      throw SecureStorageException(
+          'Failed to delete secure data for key "$key": $e');
     }
   }
 

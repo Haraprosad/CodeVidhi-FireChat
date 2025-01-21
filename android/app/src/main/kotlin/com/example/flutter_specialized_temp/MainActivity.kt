@@ -1,4 +1,4 @@
-package com.example.flutter_specialized_temp
+package com.example.codevidhi_firechat
 
 import io.flutter.embedding.android.FlutterActivity
 

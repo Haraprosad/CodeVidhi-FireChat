@@ -1,4 +1,4 @@
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/domain/entities/post.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/domain/entities/post.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'post_model.freezed.dart';
@@ -17,10 +17,9 @@ class PostModel with _$PostModel {
 
   const PostModel._();
 
-  Post toEntity()=> Post(
-    id: id,
-    title: title,
-    body: body,
-  );
-
+  Post toEntity() => Post(
+        id: id,
+        title: title,
+        body: body,
+      );
 }

@@ -1,7 +1,7 @@
 // splash_screen.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/router/app_router.dart';
-import 'package:flutter_specialized_temp/core/router/route_names.dart';
+import 'package:codevidhi_firechat/core/router/app_router.dart';
+import 'package:codevidhi_firechat/core/router/route_names.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/logger/app_logger.dart';
@@ -43,11 +43,12 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-  // Navigate to next screen after animation
+    // Navigate to next screen after animation
     Future.delayed(const Duration(seconds: 3), () {
-      if(mounted){
-        AppLogger.d(message: "****Login route is called from splash screen *****");
-      context.pushReplacementNamed(RouteNames.login);
+      if (mounted) {
+        AppLogger.d(
+            message: "****Login route is called from splash screen *****");
+        context.pushReplacementNamed(RouteNames.login);
       }
     });
   }

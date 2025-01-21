@@ -1,11 +1,11 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/storage/app_storage.dart';
-import 'package:flutter_specialized_temp/core/storage/preferences_manager.dart';
+import 'package:codevidhi_firechat/core/storage/app_storage.dart';
+import 'package:codevidhi_firechat/core/storage/preferences_manager.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:flutter_specialized_temp/core/theme/bloc/theme_bloc.dart';
+import 'package:codevidhi_firechat/core/theme/bloc/theme_bloc.dart';
 
 import 'theme_bloc_test.mocks.dart';
 
@@ -40,8 +40,7 @@ void main() {
       blocTest<ThemeBloc, ThemeState>(
         'emits light theme state when stored preference is false',
         setUp: () {
-          when(() => mockPreferencesManager.getDarkMode())
-              .thenReturn(false);
+          when(() => mockPreferencesManager.getDarkMode()).thenReturn(false);
         },
         build: () => ThemeBloc(mockAppStorage),
         act: (bloc) => bloc.add(const InitializeTheme()),
@@ -59,8 +58,7 @@ void main() {
       blocTest<ThemeBloc, ThemeState>(
         'emits dark theme state when stored preference is true',
         setUp: () {
-          when(() => mockPreferencesManager.getDarkMode())
-              .thenReturn(true);
+          when(() => mockPreferencesManager.getDarkMode()).thenReturn(true);
         },
         build: () => ThemeBloc(mockAppStorage),
         act: (bloc) => bloc.add(const InitializeTheme()),
@@ -149,7 +147,8 @@ void main() {
       test('different states are not equal', () {
         expect(
           const ThemeState(themeMode: ThemeMode.light, isDark: false),
-          isNot(equals(const ThemeState(themeMode: ThemeMode.dark, isDark: true))),
+          isNot(equals(
+              const ThemeState(themeMode: ThemeMode.dark, isDark: true))),
         );
       });
 

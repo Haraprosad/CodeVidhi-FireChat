@@ -1,9 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_specialized_temp/core/utils/throttle_droppable.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/presentation/bloc/post_state.dart';
-import 'package:flutter_specialized_temp/core/network/bloc/base_bloc.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/domain/usecases/get_posts_usecase.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/presentation/bloc/post_event.dart';
+import 'package:codevidhi_firechat/core/utils/throttle_droppable.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/presentation/bloc/post_state.dart';
+import 'package:codevidhi_firechat/core/network/bloc/base_bloc.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/domain/usecases/get_posts_usecase.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/presentation/bloc/post_event.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
@@ -13,7 +13,8 @@ class PostsBloc extends BaseBloc<PostsEvent, PostsState> {
 
   PostsBloc(this._getPostsUseCase) : super(const PostsState()) {
     on<PostsFetched>(_onFetchPosts);
-    on<PostsLoadMore>(_onLoadMorePosts, transformer: throttleDroppable(throttleDuration));
+    on<PostsLoadMore>(_onLoadMorePosts,
+        transformer: throttleDroppable(throttleDuration));
   }
 
   Future<void> _onFetchPosts(
@@ -53,7 +54,8 @@ class PostsBloc extends BaseBloc<PostsEvent, PostsState> {
         ));
       },
       onError: (failure) {
-        emit(state.copyWith(hasReachedMax: true, failure: failure,isPaginationLoading: false));
+        emit(state.copyWith(
+            hasReachedMax: true, failure: failure, isPaginationLoading: false));
       },
       emit: emit,
       showLoader: false,

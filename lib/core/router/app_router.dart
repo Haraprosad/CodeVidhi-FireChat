@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/observers/router_observer.dart';
-import 'package:flutter_specialized_temp/core/router/app_routes.dart';
-import 'package:flutter_specialized_temp/core/router/go_router_refresh_stream.dart';
-import 'package:flutter_specialized_temp/core/router/navigator_keys.dart';
-import 'package:flutter_specialized_temp/core/router/route_paths.dart';
-import 'package:flutter_specialized_temp/core/widgets/error_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_auth/presentation/bloc/bloc/auth_bloc.dart';
+import 'package:codevidhi_firechat/core/observers/router_observer.dart';
+import 'package:codevidhi_firechat/core/router/app_routes.dart';
+import 'package:codevidhi_firechat/core/router/go_router_refresh_stream.dart';
+import 'package:codevidhi_firechat/core/router/navigator_keys.dart';
+import 'package:codevidhi_firechat/core/router/route_paths.dart';
+import 'package:codevidhi_firechat/core/widgets/error_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_auth/presentation/bloc/bloc/auth_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
 
@@ -32,10 +32,9 @@ class AppRouter {
   );
 
   String? _guardRoute(BuildContext context, GoRouterState state) {
-
     bool isLoggedIn = false;
 
-    if(_authBloc.state is AuthAuthenticated){
+    if (_authBloc.state is AuthAuthenticated) {
       isLoggedIn = true;
     }
 
@@ -48,7 +47,6 @@ class AppRouter {
             "GuardRoute has been called :::::: IsLoggedIn: $isLoggedIn,  IsSplash: $isSplash, IsLoginRoute: $isLoginRoute, IsRegisterRoute: $isRegisterRoute");
 
     // Handle initializing state
-
 
     // Handle authentication
     if (!isLoggedIn && !isSplash) {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_specialized_temp/core/theme/colors/color_scheme_ext.dart';
-import 'package:flutter_specialized_temp/core/theme/typography/text_theme_ext.dart';
-import 'package:flutter_specialized_temp/core/utils/app_spacing.dart';
-import 'package:flutter_specialized_temp/features/dlt_profile/presentation/widgets/edit_profile_field.dart';
+import 'package:codevidhi_firechat/core/theme/colors/color_scheme_ext.dart';
+import 'package:codevidhi_firechat/core/theme/typography/text_theme_ext.dart';
+import 'package:codevidhi_firechat/core/utils/app_spacing.dart';
+import 'package:codevidhi_firechat/features/dlt_profile/presentation/widgets/edit_profile_field.dart';
 
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({super.key});
@@ -25,16 +25,16 @@ class EditProfileScreen extends StatelessWidget {
                 CircleAvatar(
                   radius: 50.r,
                   backgroundColor: context.colorScheme.primary,
-                  child: Text('JD', style: context.headlineLarge?.copyWith(
-                    color: context.colorScheme.onPrimary,
-                  )),
+                  child: Text('JD',
+                      style: context.headlineLarge?.copyWith(
+                        color: context.colorScheme.onPrimary,
+                      )),
                 ),
                 CircleAvatar(
                   radius: 18.r,
                   backgroundColor: context.colorScheme.secondary,
                   child: Icon(Icons.camera_alt,
-                      size: 20.r,
-                      color: context.colorScheme.onSecondary),
+                      size: 20.r, color: context.colorScheme.onSecondary),
                 ),
               ],
             ),

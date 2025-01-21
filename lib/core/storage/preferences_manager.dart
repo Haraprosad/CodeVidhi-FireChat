@@ -1,5 +1,5 @@
-import 'package:flutter_specialized_temp/core/exceptions/storage_exception.dart';
-import 'package:flutter_specialized_temp/core/storage/storage_keys.dart';
+import 'package:codevidhi_firechat/core/exceptions/storage_exception.dart';
+import 'package:codevidhi_firechat/core/storage/storage_keys.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

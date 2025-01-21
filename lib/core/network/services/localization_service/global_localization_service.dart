@@ -1,6 +1,6 @@
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_specialized_temp/core/network/constants/error_messages_key.dart';
-import 'package:flutter_specialized_temp/core/network/services/localization_service/localization_service.dart';
+import 'package:codevidhi_firechat/core/network/constants/error_messages_key.dart';
+import 'package:codevidhi_firechat/core/network/services/localization_service/localization_service.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: LocalizationService)

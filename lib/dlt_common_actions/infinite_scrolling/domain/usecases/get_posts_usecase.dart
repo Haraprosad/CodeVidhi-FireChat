@@ -1,6 +1,6 @@
-import 'package:flutter_specialized_temp/core/network/models/api_result.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/domain/entities/post.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/domain/repository/posts_repository.dart';
+import 'package:codevidhi_firechat/core/network/models/api_result.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/domain/entities/post.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/domain/repository/posts_repository.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable

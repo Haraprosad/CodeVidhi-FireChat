@@ -1,8 +1,8 @@
 // app_storage_test.dart
 
-import 'package:flutter_specialized_temp/core/storage/app_storage.dart';
-import 'package:flutter_specialized_temp/core/storage/secure_storage_manager.dart';
-import 'package:flutter_specialized_temp/core/storage/preferences_manager.dart';
+import 'package:codevidhi_firechat/core/storage/app_storage.dart';
+import 'package:codevidhi_firechat/core/storage/secure_storage_manager.dart';
+import 'package:codevidhi_firechat/core/storage/preferences_manager.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
@@ -23,9 +23,11 @@ void main() {
   });
 
   group('AppStorage', () {
-    test('should call deleteAllSecureData and clearAll in clearAllData', () async {
+    test('should call deleteAllSecureData and clearAll in clearAllData',
+        () async {
       // Arrange
-      when(mockSecureStorage.deleteAllSecureData()).thenAnswer((_) async => Future.value());
+      when(mockSecureStorage.deleteAllSecureData())
+          .thenAnswer((_) async => Future.value());
       when(mockPreferences.clearAll()).thenAnswer((_) async => Future.value());
 
       // Act
@@ -38,7 +40,8 @@ void main() {
 
     test('should propagate exceptions if deleteAllSecureData fails', () async {
       // Arrange
-      when(mockSecureStorage.deleteAllSecureData()).thenThrow(Exception('Failed to delete secure data'));
+      when(mockSecureStorage.deleteAllSecureData())
+          .thenThrow(Exception('Failed to delete secure data'));
       when(mockPreferences.clearAll()).thenAnswer((_) async => Future.value());
 
       // Act & Assert
@@ -54,8 +57,10 @@ void main() {
 
     test('should propagate exceptions if clearAll fails', () async {
       // Arrange
-      when(mockSecureStorage.deleteAllSecureData()).thenAnswer((_) async => Future.value());
-      when(mockPreferences.clearAll()).thenThrow(Exception('Failed to clear preferences'));
+      when(mockSecureStorage.deleteAllSecureData())
+          .thenAnswer((_) async => Future.value());
+      when(mockPreferences.clearAll())
+          .thenThrow(Exception('Failed to clear preferences'));
 
       // Act & Assert
       await expectLater(

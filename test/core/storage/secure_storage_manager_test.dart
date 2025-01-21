@@ -1,7 +1,7 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:flutter_specialized_temp/core/exceptions/storage_exception.dart';
-import 'package:flutter_specialized_temp/core/storage/secure_storage_manager.dart';
-import 'package:flutter_specialized_temp/core/storage/storage_keys.dart';
+import 'package:codevidhi_firechat/core/exceptions/storage_exception.dart';
+import 'package:codevidhi_firechat/core/storage/secure_storage_manager.dart';
+import 'package:codevidhi_firechat/core/storage/storage_keys.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -131,13 +131,13 @@ void main() {
       // Arrange
       const accessToken = 'testAccessToken';
       const refreshToken = 'testRefreshToken';
-      
+
       // Setup mocks with specific values
       when(mockStorage.write(
         key: StorageKeys.authToken,
         value: accessToken,
       )).thenAnswer((_) => Future.value());
-      
+
       when(mockStorage.write(
         key: StorageKeys.refreshToken,
         value: refreshToken,
@@ -175,10 +175,12 @@ void main() {
       final result = await storageManager.getAuthTokens();
 
       // Assert
-      expect(result, equals({
-        'accessToken': accessToken,
-        'refreshToken': refreshToken,
-      }));
+      expect(
+          result,
+          equals({
+            'accessToken': accessToken,
+            'refreshToken': refreshToken,
+          }));
       verify(mockStorage.read(key: StorageKeys.authToken)).called(1);
       verify(mockStorage.read(key: StorageKeys.refreshToken)).called(1);
     });
@@ -194,10 +196,12 @@ void main() {
       final result = await storageManager.getAuthTokens();
 
       // Assert
-      expect(result, equals({
-        'accessToken': null,
-        'refreshToken': null,
-      }));
+      expect(
+          result,
+          equals({
+            'accessToken': null,
+            'refreshToken': null,
+          }));
     });
   });
 }

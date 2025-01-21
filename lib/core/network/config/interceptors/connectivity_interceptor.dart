@@ -1,8 +1,8 @@
 // connectivity_interceptor.dart
 
 import 'package:dio/dio.dart';
-import 'package:flutter_specialized_temp/core/network/services/connection_manager.dart';
-import 'package:flutter_specialized_temp/core/network/enums/custom_error_type.dart';
+import 'package:codevidhi_firechat/core/network/services/connection_manager.dart';
+import 'package:codevidhi_firechat/core/network/enums/custom_error_type.dart';
 
 /// Interceptor that checks for network connectivity before making requests.
 class ConnectivityInterceptor extends Interceptor {

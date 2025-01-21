@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter_specialized_temp/core/network/bloc/base_bloc_state.dart';
-import 'package:flutter_specialized_temp/core/network/error_handling/models/api_call_failure_model.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/domain/entities/post.dart';
+import 'package:codevidhi_firechat/core/network/bloc/base_bloc_state.dart';
+import 'package:codevidhi_firechat/core/network/error_handling/models/api_call_failure_model.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/domain/entities/post.dart';
 
 final class PostsState extends Equatable implements BaseBlocState {
   /// List of posts retrieved
@@ -50,7 +50,8 @@ final class PostsState extends Equatable implements BaseBlocState {
 
   /// Implements Equatable to allow state comparison
   @override
-  List<Object?> get props => [posts, hasReachedMax, isLoading, isPaginationLoading, failure];
+  List<Object?> get props =>
+      [posts, hasReachedMax, isLoading, isPaginationLoading, failure];
 
   /// Provides a string representation of the state
   @override

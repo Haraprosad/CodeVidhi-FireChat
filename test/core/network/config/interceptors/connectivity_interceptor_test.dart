@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_specialized_temp/core/network/config/interceptors/connectivity_interceptor.dart';
-import 'package:flutter_specialized_temp/core/network/enums/custom_error_type.dart';
-import 'package:flutter_specialized_temp/core/network/services/connection_manager.dart';
+import 'package:codevidhi_firechat/core/network/config/interceptors/connectivity_interceptor.dart';
+import 'package:codevidhi_firechat/core/network/enums/custom_error_type.dart';
+import 'package:codevidhi_firechat/core/network/services/connection_manager.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
@@ -36,7 +36,8 @@ void main() {
       verifyNever(handler.next(any));
     });
 
-    test('should proceed with request when internet connection exists', () async {
+    test('should proceed with request when internet connection exists',
+        () async {
       // Arrange
       when(connectionManager.checkInternetConnection())
           .thenAnswer((_) async => true);

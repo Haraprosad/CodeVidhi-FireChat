@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_specialized_temp/core/utils/app_spacing.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/presentation/bloc/task_bloc.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/presentation/bloc/task_event.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/presentation/bloc/task_state.dart';
+import 'package:codevidhi_firechat/core/utils/app_spacing.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/presentation/bloc/task_bloc.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/presentation/bloc/task_event.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/presentation/bloc/task_state.dart';
 
 class TaskDetailsScreen extends StatelessWidget {
   final String taskId;
@@ -26,9 +26,7 @@ class TaskDetailsScreen extends StatelessWidget {
               padding: EdgeInsets.all(AppSpacing.mediumW),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                 Text("Details Loaded")
-                ],
+                children: [Text("Details Loaded")],
               ),
             ),
           );

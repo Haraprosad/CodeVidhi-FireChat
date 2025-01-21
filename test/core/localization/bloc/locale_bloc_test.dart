@@ -1,13 +1,14 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/localization/bloc/locale_bloc.dart';
-import 'package:flutter_specialized_temp/core/localization/locale_constants.dart';
-import 'package:flutter_specialized_temp/core/storage/app_storage.dart';
-import 'package:flutter_specialized_temp/core/storage/preferences_manager.dart';
+import 'package:codevidhi_firechat/core/localization/bloc/locale_bloc.dart';
+import 'package:codevidhi_firechat/core/localization/locale_constants.dart';
+import 'package:codevidhi_firechat/core/storage/app_storage.dart';
+import 'package:codevidhi_firechat/core/storage/preferences_manager.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockAppStorage extends Mock implements AppStorage {}
+
 class MockPreferencesManager extends Mock implements PreferencesManager {}
 
 void main() {
@@ -18,12 +19,13 @@ void main() {
   setUp(() {
     mockAppStorage = MockAppStorage();
     mockPreferencesManager = MockPreferencesManager();
-    
+
     // Set up the base stubs
     when(() => mockAppStorage.preferences).thenReturn(mockPreferencesManager);
     when(() => mockPreferencesManager.getLanguage()).thenReturn('en');
-    when(() => mockPreferencesManager.setLanguage(any())).thenAnswer((_) async {});
-    
+    when(() => mockPreferencesManager.setLanguage(any()))
+        .thenAnswer((_) async {});
+
     localeBloc = LocaleBloc(mockAppStorage);
   });
 
@@ -100,7 +102,8 @@ void main() {
         'does not emit new state when same locale is selected',
         build: () => LocaleBloc(mockAppStorage),
         seed: () => const LocaleState(LocaleConstants.english),
-        act: (bloc) => bloc.add(const ChangeLocaleEvent(LocaleConstants.english)),
+        act: (bloc) =>
+            bloc.add(const ChangeLocaleEvent(LocaleConstants.english)),
         expect: () => [],
       );
     });

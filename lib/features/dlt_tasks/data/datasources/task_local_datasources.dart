@@ -1,4 +1,4 @@
-import 'package:flutter_specialized_temp/features/dlt_tasks/data/models/task_model.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/data/models/task_model.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable

@@ -2,9 +2,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_specialized_temp/core/exceptions/storage_exception.dart';
-import 'package:flutter_specialized_temp/core/storage/storage_keys.dart';
-import 'package:flutter_specialized_temp/core/storage/preferences_manager.dart';
+import 'package:codevidhi_firechat/core/exceptions/storage_exception.dart';
+import 'package:codevidhi_firechat/core/storage/storage_keys.dart';
+import 'package:codevidhi_firechat/core/storage/preferences_manager.dart';
 
 import 'preferences_manager_test.mocks.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/router/route_names.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/domain/entities/task_entity.dart';
+import 'package:codevidhi_firechat/core/router/route_names.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/domain/entities/task_entity.dart';
 import 'package:go_router/go_router.dart';
 
 class TaskItem extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/theme/colors/color_scheme_ext.dart';
-import 'package:flutter_specialized_temp/core/theme/typography/text_theme_ext.dart';
-import 'package:flutter_specialized_temp/core/utils/app_spacing.dart';
+import 'package:codevidhi_firechat/core/theme/colors/color_scheme_ext.dart';
+import 'package:codevidhi_firechat/core/theme/typography/text_theme_ext.dart';
+import 'package:codevidhi_firechat/core/utils/app_spacing.dart';
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({super.key});
@@ -18,9 +18,10 @@ class NotificationsScreen extends StatelessWidget {
         separatorBuilder: (_, __) => Divider(height: AppSpacing.smallH),
         itemBuilder: (context, index) {
           return ListTile(
-            leading: Icon(Icons.notifications,
-                color: context.colorScheme.primary),
-            title: Text('Notification ${index + 1}', style: context.titleMedium),
+            leading:
+                Icon(Icons.notifications, color: context.colorScheme.primary),
+            title:
+                Text('Notification ${index + 1}', style: context.titleMedium),
             subtitle: Text('This is a notification message',
                 style: context.bodyMedium),
             trailing: Text('2h ago', style: context.bodySmall),

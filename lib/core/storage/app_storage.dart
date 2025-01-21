@@ -1,5 +1,5 @@
-import 'package:flutter_specialized_temp/core/storage/secure_storage_manager.dart';
-import 'package:flutter_specialized_temp/core/storage/preferences_manager.dart';
+import 'package:codevidhi_firechat/core/storage/secure_storage_manager.dart';
+import 'package:codevidhi_firechat/core/storage/preferences_manager.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton

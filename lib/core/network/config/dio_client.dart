@@ -1,14 +1,13 @@
 // dio_client.dart
 
 import 'package:dio/dio.dart';
-import 'package:flutter_specialized_temp/flavors/env_config.dart';
+import 'package:codevidhi_firechat/flavors/env_config.dart';
 import 'package:injectable/injectable.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_specialized_temp/core/network/services/connection_manager.dart';
-import 'package:flutter_specialized_temp/core/network/constants/network_constants.dart';
-import 'package:flutter_specialized_temp/core/network/config/interceptors/connectivity_interceptor.dart';
-import 'package:flutter_specialized_temp/core/network/config/interceptors/error_interceptor.dart';
-
+import 'package:codevidhi_firechat/core/network/services/connection_manager.dart';
+import 'package:codevidhi_firechat/core/network/constants/network_constants.dart';
+import 'package:codevidhi_firechat/core/network/config/interceptors/connectivity_interceptor.dart';
+import 'package:codevidhi_firechat/core/network/config/interceptors/error_interceptor.dart';
 
 /// Singleton service for configuring and providing a Dio HTTP client instance.
 @lazySingleton

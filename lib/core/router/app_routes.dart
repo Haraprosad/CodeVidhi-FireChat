@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_specialized_temp/core/router/navigator_keys.dart';
-import 'package:flutter_specialized_temp/core/router/route_names.dart';
-import 'package:flutter_specialized_temp/core/router/route_paths.dart';
-import 'package:flutter_specialized_temp/core/widgets/scaffold_with_bottom_nav.dart';
+import 'package:codevidhi_firechat/core/router/navigator_keys.dart';
+import 'package:codevidhi_firechat/core/router/route_names.dart';
+import 'package:codevidhi_firechat/core/router/route_paths.dart';
+import 'package:codevidhi_firechat/core/widgets/scaffold_with_bottom_nav.dart';
 
-import 'package:flutter_specialized_temp/features/dlt_auth/presentation/pages/login_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_auth/presentation/pages/register_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_auth/presentation/pages/splash_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_home/presentation/pages/home_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_home/presentation/pages/notifications_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_profile/presentation/pages/edit_profile_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_profile/presentation/pages/profile_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/presentation/bloc/task_bloc.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/presentation/pages/sub_tasks_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/presentation/pages/task_details_screen.dart';
-import 'package:flutter_specialized_temp/features/dlt_tasks/presentation/pages/tasks_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_auth/presentation/pages/login_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_auth/presentation/pages/register_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_auth/presentation/pages/splash_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_home/presentation/pages/home_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_home/presentation/pages/notifications_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_profile/presentation/pages/edit_profile_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_profile/presentation/pages/profile_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/presentation/bloc/task_bloc.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/presentation/pages/sub_tasks_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/presentation/pages/task_details_screen.dart';
+import 'package:codevidhi_firechat/features/dlt_tasks/presentation/pages/tasks_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
 

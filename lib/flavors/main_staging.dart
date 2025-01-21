@@ -1,6 +1,6 @@
-import 'package:flutter_specialized_temp/core/constants/env_constants.dart';
-import 'package:flutter_specialized_temp/flavors/app_initializer.dart';
-import 'package:flutter_specialized_temp/flavors/environment.dart';
+import 'package:codevidhi_firechat/core/constants/env_constants.dart';
+import 'package:codevidhi_firechat/flavors/app_initializer.dart';
+import 'package:codevidhi_firechat/flavors/environment.dart';
 
 void main() async {
   await initializeApp(

@@ -2,7 +2,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/storage/app_storage.dart';
+import 'package:codevidhi_firechat/core/storage/app_storage.dart';
 import 'package:injectable/injectable.dart';
 
 part 'theme_event.dart';

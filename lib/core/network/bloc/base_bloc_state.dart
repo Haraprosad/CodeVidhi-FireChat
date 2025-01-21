@@ -1,6 +1,6 @@
 // base_bloc_state.dart
 
-import 'package:flutter_specialized_temp/core/network/error_handling/models/api_call_failure_model.dart';
+import 'package:codevidhi_firechat/core/network/error_handling/models/api_call_failure_model.dart';
 
 /// Base class for all BLoC states with loading and error handling properties.
 abstract class BaseBlocState {

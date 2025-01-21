@@ -1,13 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_specialized_temp/core/network/config/dio_client.dart';
-import 'package:flutter_specialized_temp/core/network/config/interceptors/connectivity_interceptor.dart';
-import 'package:flutter_specialized_temp/core/network/config/interceptors/error_interceptor.dart';
-import 'package:flutter_specialized_temp/core/network/constants/network_constants.dart';
+import 'package:codevidhi_firechat/core/network/config/dio_client.dart';
+import 'package:codevidhi_firechat/core/network/config/interceptors/connectivity_interceptor.dart';
+import 'package:codevidhi_firechat/core/network/config/interceptors/error_interceptor.dart';
+import 'package:codevidhi_firechat/core/network/constants/network_constants.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
-import 'package:flutter_specialized_temp/core/network/services/connection_manager.dart';
-
+import 'package:codevidhi_firechat/core/network/services/connection_manager.dart';
 
 import 'base_bloc_test.mocks.dart';
 
@@ -15,7 +14,6 @@ import 'base_bloc_test.mocks.dart';
 void main() {
   late DioClient dioClient;
   late MockConnectionManager mockConnectionManager;
-
 
   setUp(() {
     mockConnectionManager = MockConnectionManager();

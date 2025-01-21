@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/theme/base/app_theme_type.dart';
-import 'package:flutter_specialized_temp/core/theme/colors/theme_colors.dart';
+import 'package:codevidhi_firechat/core/theme/base/app_theme_type.dart';
+import 'package:codevidhi_firechat/core/theme/colors/theme_colors.dart';
 
 class AppThemeColorsConfig {
   // Status Colors (same for both themes)

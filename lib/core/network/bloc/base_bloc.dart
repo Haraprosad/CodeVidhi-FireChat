@@ -2,9 +2,9 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:bloc/bloc.dart';
-import 'package:flutter_specialized_temp/core/network/bloc/base_bloc_state.dart';
-import 'package:flutter_specialized_temp/core/network/models/api_result.dart';
-import 'package:flutter_specialized_temp/core/network/error_handling/models/api_call_failure_model.dart';
+import 'package:codevidhi_firechat/core/network/bloc/base_bloc_state.dart';
+import 'package:codevidhi_firechat/core/network/models/api_result.dart';
+import 'package:codevidhi_firechat/core/network/error_handling/models/api_call_failure_model.dart';
 
 /// Base class for handling API calls in a BLoC, providing error and success management.
 abstract class BaseBloc<Event, State extends BaseBlocState>

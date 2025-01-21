@@ -1,8 +1,8 @@
 // login_screen.dart
 import 'package:flutter/material.dart';
-import 'package:flutter_specialized_temp/core/router/app_router.dart';
-import 'package:flutter_specialized_temp/core/router/route_names.dart';
-import 'package:flutter_specialized_temp/features/dlt_auth/presentation/bloc/bloc/auth_bloc.dart';
+import 'package:codevidhi_firechat/core/router/app_router.dart';
+import 'package:codevidhi_firechat/core/router/route_names.dart';
+import 'package:codevidhi_firechat/features/dlt_auth/presentation/bloc/bloc/auth_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/di/injection.dart';

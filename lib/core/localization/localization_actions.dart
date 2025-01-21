@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_specialized_temp/core/localization/bloc/locale_bloc.dart';
+import 'package:codevidhi_firechat/core/localization/bloc/locale_bloc.dart';
 
 class LocalizationActions {
   static void setLocale(BuildContext context, Locale locale) {

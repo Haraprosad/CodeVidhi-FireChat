@@ -1,10 +1,10 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/presentation/bloc/post_bloc.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/presentation/bloc/post_event.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/presentation/bloc/post_state.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/presentation/widgets/bottom_loader.dart';
-import 'package:flutter_specialized_temp/dlt_common_actions/infinite_scrolling/presentation/widgets/post_item.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/presentation/bloc/post_bloc.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/presentation/bloc/post_event.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/presentation/bloc/post_state.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/presentation/widgets/bottom_loader.dart';
+import 'package:codevidhi_firechat/dlt_common_actions/infinite_scrolling/presentation/widgets/post_item.dart';
 
 class PostList extends StatefulWidget {
   const PostList({super.key});
@@ -50,9 +50,9 @@ class _PostListState extends State<PostList> {
           itemCount: state.posts.length + (state.hasReachedMax ? 0 : 1),
           itemBuilder: (context, index) {
             if (index >= state.posts.length) {
-              return state.isPaginationLoading 
-                ? const BottomLoader() 
-                : const SizedBox.shrink();
+              return state.isPaginationLoading
+                  ? const BottomLoader()
+                  : const SizedBox.shrink();
             }
             return PostItem(post: state.posts[index]);
           },

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_specialized_temp/core/theme/base/app_theme_type.dart';
-import 'package:flutter_specialized_temp/core/theme/colors/app_theme_colors_config.dart';
-import 'package:flutter_specialized_temp/core/theme/colors/theme_colors.dart';
-import 'package:flutter_specialized_temp/core/theme/constants/theme_constants.dart';
-import 'package:flutter_specialized_temp/core/theme/typography/text_theme.dart';
+import 'package:codevidhi_firechat/core/theme/base/app_theme_type.dart';
+import 'package:codevidhi_firechat/core/theme/colors/app_theme_colors_config.dart';
+import 'package:codevidhi_firechat/core/theme/colors/theme_colors.dart';
+import 'package:codevidhi_firechat/core/theme/constants/theme_constants.dart';
+import 'package:codevidhi_firechat/core/theme/typography/text_theme.dart';
 import '../styles/button_styles.dart';
 
 class AppTheme {
