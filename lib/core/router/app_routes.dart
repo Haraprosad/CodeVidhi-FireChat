@@ -55,6 +55,19 @@ class AppRoutes {
               // ],
             ),
 
+             GoRoute(
+              path: RoutePaths.users,
+              name: RouteNames.users,
+              builder: (context, state) => const ChatsPage(),
+              // routes: [
+              //   GoRoute(
+              //     path: RoutePaths.conversation,
+              //     name: RouteNames.conversation,
+              //     builder: (context, state) => const NotificationsScreen(),
+              //   ),
+              // ],
+            ),
+
             // Profile Stack with Tabs
             GoRoute(
               path: RoutePaths.settings,

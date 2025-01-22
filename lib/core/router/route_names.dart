@@ -7,6 +7,7 @@ class RouteNames {
   static const String register = 'register';
   
   // Main Routes
+  static const String users = 'users';
   static const String chats = 'chats';
   static const String settings = 'settings';
   

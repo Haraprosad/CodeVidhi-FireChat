@@ -7,6 +7,7 @@ class RoutePaths {
   static const String register = '/register';
   
   // Main Routes with Bottom Navigation
+  static const String users = '/users';
   static const String chats = '/chats';
   static const String settings = '/settings';
   
